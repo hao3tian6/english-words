@@ -2,88 +2,78 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>趣味英语单词记忆</title>
     <style>
-        * {
-            -webkit-tap-highlight-color: transparent;
-            box-sizing: border-box;
-        }
-
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             margin: 0;
-            padding: 10px;
+            padding: 20px;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
-            touch-action: manipulation;
         }
 
         h1 {
             color: #2c3e50;
             text-align: center;
-            margin: 15px 0;
-            font-size: 1.5em;
+            margin-bottom: 30px;
         }
 
         .container {
+            max-width: 800px;
             width: 100%;
-            max-width: 100%;
             margin: 0 auto;
-            padding: 0 10px;
         }
 
         .word-card {
             background: white;
-            padding: 15px;
+            padding: 30px;
             border-radius: 15px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            margin-bottom: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
         }
 
         .chinese-word {
-            font-size: 1.8em;
+            font-size: 2em;
             color: #2c3e50;
             text-align: center;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         .story {
             background: #f8f9fa;
-            padding: 15px;
+            padding: 20px;
             border-radius: 10px;
-            margin: 15px 0;
+            margin: 20px 0;
             line-height: 1.6;
-            font-size: 0.95em;
         }
 
         .letter-buttons {
-            display: grid;
-            grid-template-columns: repeat(7, 1fr);
-            gap: 5px;
-            margin: 15px 0;
-            padding: 0 5px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin: 20px 0;
         }
 
         .letter-button {
-            width: 100%;
+            width: 40px;
             height: 40px;
             border: none;
             border-radius: 8px;
             background: #3498db;
             color: white;
-            font-size: 1.1em;
+            font-size: 1.2em;
             cursor: pointer;
-            transition: all 0.2s;
-            touch-action: manipulation;
+            transition: all 0.3s;
         }
 
-        .letter-button:active {
+        .letter-button:hover {
             background: #2980b9;
-            transform: scale(0.95);
+            transform: scale(1.1);
         }
 
         .letter-button.used {
@@ -95,20 +85,19 @@
         .word-display {
             display: flex;
             justify-content: center;
-            gap: 5px;
-            margin: 15px 0;
-            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
         }
 
         .letter-box {
-            width: 35px;
-            height: 35px;
+            width: 40px;
+            height: 40px;
             border: 2px solid #3498db;
             border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.3em;
+            font-size: 1.5em;
             font-weight: bold;
             color: #2c3e50;
         }
@@ -116,49 +105,27 @@
         .navigation {
             display: flex;
             justify-content: space-between;
-            margin-top: 15px;
-            gap: 10px;
-            padding: 0 5px;
+            margin-top: 20px;
         }
 
         .nav-button {
-            flex: 1;
             background: #3498db;
             color: white;
             border: none;
-            padding: 12px 20px;
+            padding: 10px 20px;
             border-radius: 8px;
             cursor: pointer;
-            font-size: 1em;
-            touch-action: manipulation;
+            font-size: 1.1em;
         }
 
-        .nav-button:active {
+        .nav-button:hover {
             background: #2980b9;
-            transform: scale(0.98);
         }
 
         .progress {
-            margin: 15px 0;
-            font-size: 1.1em;
+            margin: 20px 0;
+            font-size: 1.2em;
             color: #2c3e50;
-        }
-
-        @media (max-width: 360px) {
-            .letter-buttons {
-                grid-template-columns: repeat(6, 1fr);
-            }
-            
-            .letter-box {
-                width: 30px;
-                height: 30px;
-                font-size: 1.2em;
-            }
-            
-            .letter-button {
-                height: 35px;
-                font-size: 1em;
-            }
         }
     </style>
 </head>
@@ -184,102 +151,102 @@
             { 
                 word: 'sunny', 
                 chinese: '晴天',
-                story: '想象一下，在一个阳光明媚的早晨，太阳（sun）高高挂在天空中，阳光温暖地照在你的脸上，让你感觉特别舒服（sunny）。\n\n字母故事：\n一条弯曲的蛇（s）在阳光下悠闲地晒太阳，它开心地咧开嘴（u）微笑，因为天气太好了。远处有两座小山（n,n），被阳光照耀得闪闪发亮。山上的树枝（y）在阳光下伸展，仿佛在享受这美好的时光。\n\n记住：sun（太阳）+ ny（形容词后缀）= sunny（晴朗的）'
+                story: '想象一下，在一个阳光明媚的早晨，一条小蛇（s）在阳光下悠闲地晒太阳，它开心地咧开嘴（u）微笑。远处有两座小山（n,n），被阳光照耀得闪闪发亮。山上的树枝（y）在阳光下伸展，仿佛在享受这美好的时光。\n\n记住：sun（太阳）+ ny（形容词后缀）= sunny（晴朗的）'
             },
             { 
                 word: 'rainy', 
                 chinese: '下雨的',
-                story: '下雨天，雨滴（rain）从天空中落下来，打在你的雨伞上发出滴答声。\n\n字母故事：\n你撑着一把雨伞（r）走在雨中，突然一滴雨（a）落在你的脸上。接着，更多的雨丝（i）从天上垂直落下。一道闪电（n）划破天空，照亮了雨中的树枝（y），树枝被雨水打湿，显得格外青翠。\n\n记住：rain（雨）+ y（形容词后缀）= rainy（下雨的）'
+                story: '下雨天，你撑着一把雨伞（r）走在雨中，突然一滴雨（a）落在你的脸上。接着，一根小草（i）在雨中摇摆。远处的小山（n）被雨水打湿，山上的树枝（y）在雨中轻轻摇曳。\n\n记住：rain（雨）+ y（形容词后缀）= rainy（下雨的）'
             },
             { 
                 word: 'cloudy', 
                 chinese: '多云的',
-                story: '天空中飘着朵朵白云（cloud），像棉花糖一样。\n\n字母故事：\n一朵弯弯的云（c）飘在天空中，云中若隐若现地露出一根树干（l）。云朵中间有一个圆圆的太阳（o），被云遮住了一半。你看着这朵云，开心地笑了（u），突然一滴雨（d）从云中落下，打湿了云中的树枝（y）。\n\n记住：cloud（云）+ y（形容词后缀）= cloudy（多云的）'
+                story: '天空中飘着一朵云（c），云中若隐若现地露出一根花茎（l）。云朵中间有一个圆月（o），被云遮住了一半。你看着这朵云，开心地笑了（u），突然一个贝壳（d）从云中落下，打湿了云中的树枝（y）。\n\n记住：cloud（云）+ y（形容词后缀）= cloudy（多云的）'
             },
             { 
                 word: 'windy', 
                 chinese: '刮风的',
-                story: '风吹（wind）过树梢，树叶随风摇摆。\n\n字母故事：\n一阵风吹来，海面泛起波浪（w），一根小草（i）在风中轻轻摇摆。远处的小山（n）被风吹拂，山上的风车（d）随风转动，树枝（y）在风中摇曳，仿佛在跳舞。\n\n记住：wind（风）+ y（形容词后缀）= windy（刮风的）'
+                story: '一阵风吹来，海面泛起波浪（w），一根小草（i）在风中轻轻摇摆。远处的小山（n）被风吹拂，一个贝壳（d）随风飘动，树枝（y）在风中摇曳，仿佛在跳舞。\n\n记住：wind（风）+ y（形容词后缀）= windy（刮风的）'
             },
             { 
                 word: 'snowy', 
                 chinese: '下雪的',
-                story: '雪花（snow）从天空中飘落，像白色的花瓣。\n\n字母故事：\n一片雪花（s）从天上飘落，落在远处的雪山（n）上。你抓起一个雪球（o），雪球圆滚滚的。远处的波浪（w）被白雪覆盖，树枝（y）上挂满了晶莹的雪花。\n\n记住：snow（雪）+ y（形容词后缀）= snowy（下雪的）'
+                story: '一条小蛇（s）在雪地里爬行，远处的小山（n）被白雪覆盖。一个圆月（o）挂在天空，远处的波浪（w）也被白雪覆盖，树枝（y）上挂满了晶莹的雪花。\n\n记住：snow（雪）+ y（形容词后缀）= snowy（下雪的）'
             },
             { 
                 word: 'weather', 
                 chinese: '天气',
-                story: '天气（weather）就像是大自然的情绪，有时晴朗，有时下雨。\n\n字母故事：\n天气变化多端，海面泛起波浪（w），太阳（e）时而出现，时而躲藏。雨滴（a）落下，打在树叶（t）上。你躲进房子（h）里，看着太阳（e）再次出现，赶紧拿起雨伞（r）准备出门。\n\n记住：we（我们）+ at（在）+ her（她）= weather（天气）'
+                story: '海面泛起波浪（w），太阳（e）时而出现，时而躲藏。一滴雨（a）落下，打在一棵树干（t）上。你躲进房子（h）里，看着太阳（e）再次出现，赶紧拿起雨伞（r）准备出门。\n\n记住：we（我们）+ at（在）+ her（她）= weather（天气）'
             },
             { 
                 word: 'sun', 
                 chinese: '太阳',
-                story: '太阳（sun）是天空中最亮的星星，给我们带来光明和温暖。\n\n字母故事：\n一条蛇（s）在阳光下晒太阳，它开心地咧开嘴（u）微笑，因为阳光太温暖了。远处的小山（n）被阳光照耀得闪闪发亮。\n\n记住：sun（太阳）'
+                story: '一条小蛇（s）在阳光下晒太阳，它开心地咧开嘴（u）微笑，因为阳光太温暖了。远处的小山（n）被阳光照耀得闪闪发亮。\n\n记住：sun（太阳）'
             },
             { 
                 word: 'tree', 
                 chinese: '树',
-                story: '树（tree）是大自然的守护者，为我们提供氧气和阴凉。\n\n字母故事：\n一棵直立的树干（t）向上生长，树枝（r）向右伸展。太阳（e）照耀着树，让树叶闪闪发亮。另一轮太阳（e）也来帮忙，让树长得更加茂盛。\n\n记住：tree（树）'
+                story: '一棵树干（t）向上生长，树枝（r）向右伸展。太阳（e）照耀着树，让树叶闪闪发亮。另一轮太阳（e）也来帮忙，让树长得更加茂盛。\n\n记住：tree（树）'
             },
             { 
                 word: 'sea', 
                 chinese: '大海',
-                story: '大海（sea）一望无际，波涛汹涌。\n\n字母故事：\n海面泛起波浪（s），太阳（e）照耀着海面，一艘帆船（a）在海上航行。\n\n记住：sea（大海）'
+                story: '一条小蛇（s）在海边晒太阳，太阳（e）照耀着海面，一滴雨（a）落在海面上，激起涟漪。\n\n记住：sea（大海）'
             },
             { 
                 word: 'beach', 
                 chinese: '沙滩',
-                story: '沙滩（beach）上铺满了金色的沙子，海浪轻轻拍打着岸边。\n\n字母故事：\n一个贝壳（b）躺在沙滩上，太阳（e）照耀着它。沙滩上留下一个脚印（a），海浪（c）轻轻拍打着岸边，一把遮阳伞（h）立在沙滩上，为人们遮挡阳光。\n\n记住：beach（沙滩）'
+                story: '一个书包（b）躺在沙滩上，太阳（e）照耀着它。一滴雨（a）落在沙滩上，一朵云（c）飘在天空中，一把房子（h）立在沙滩上，为人们遮挡阳光。\n\n记住：beach（沙滩）'
             },
             { 
                 word: 'flower', 
                 chinese: '花',
-                story: '花朵（flower）绽放时，像彩虹一样绚丽多彩。\n\n字母故事：\n一朵花（f）随风摇曳，花茎（l）直立生长。花蕊（o）圆圆的，花瓣（w）层层叠叠。太阳（e）照耀着花朵，花枝（r）伸展出去，让花朵更加美丽。\n\n记住：flower（花）'
+                story: '一朵花（f）随风摇曳，花茎（l）直立生长。一个圆月（o）照耀着花朵，海面泛起波浪（w），太阳（e）让花朵更加美丽，树枝（r）伸展出去。\n\n记住：flower（花）'
             },
             { 
                 word: 'sleep', 
                 chinese: '睡觉',
-                story: '睡觉（sleep）时，我们闭上眼睛，进入甜美的梦乡。\n\n字母故事：\n弯弯的月亮（s）挂在夜空，你躺在枕头（l）上。两只眼睛（e,e）慢慢闭上，嘴巴（p）发出轻轻的呼噜声，进入了梦乡。\n\n记住：sleep（睡觉）'
+                story: '一条小蛇（s）盘在枕头上，花茎（l）轻轻摇晃。太阳（e）慢慢落下，另一轮太阳（e）也躲起来了，一个枕头（p）让你安睡。\n\n记住：sleep（睡觉）'
             },
             { 
                 word: 'climb', 
                 chinese: '爬',
-                story: '爬山（climb）时，我们一步一步向上攀登。\n\n字母故事：\n你走在弯曲的山路（c）上，拄着登山杖（l）向上攀登。一个人（i）正在努力爬山，远处有两座山峰（m）等待攀登。你背着一个背包（b），里面装着登山装备。\n\n记住：climb（爬）'
+                story: '一朵云（c）飘在山间，花茎（l）像登山杖。一根小草（i）在风中摇摆，一座大山（m）等待攀登，一个书包（b）背在肩上。\n\n记住：climb（爬）'
             },
             { 
                 word: 'run', 
                 chinese: '跑步',
-                story: '跑步（run）时，我们的脚步轻快有力。\n\n字母故事：\n你站在跑道（r）上，开心地咧开嘴（u）微笑，因为马上就要开始跑步了。终点线（n）就在前方，等待着你冲刺。\n\n记住：run（跑步）'
+                story: '树枝（r）随风摇摆，你开心地咧开嘴（u）微笑，远处的小山（n）就是终点。\n\n记住：run（跑步）'
             },
             { 
                 word: 'walk', 
                 chinese: '走路',
-                story: '走路（walk）时，我们悠闲地欣赏沿途的风景。\n\n字母故事：\n你走在蜿蜒的小路（w）上，路上留下一个脚印（a）。你拄着拐杖（l），两条腿（k）正在悠闲地散步。\n\n记住：walk（走路）'
+                story: '海面泛起波浪（w），一滴雨（a）落在路上。花茎（l）像拐杖，一把钥匙（k）挂在腰间。\n\n记住：walk（走路）'
             },
             { 
                 word: 'swim', 
                 chinese: '游泳',
-                story: '游泳（swim）时，我们在水中自由自在地游动。\n\n字母故事：\n你跳入水中，激起波浪（s），水花（w）四溅。一个人（i）在水中自由自在地游泳，远处的波浪（m）前后起伏。\n\n记住：swim（游泳）'
+                story: '一条小蛇（s）在水中游动，海面泛起波浪（w）。一根小草（i）在水中摇摆，远处的小山（m）倒映在水中。\n\n记住：swim（游泳）'
             },
             { 
                 word: 'eat', 
                 chinese: '吃',
-                story: '吃饭（eat）时，我们享受美味的食物。\n\n字母故事：\n你张开嘴巴（e），看着盘子（a）里的美食，拿起叉子（t）准备开吃。\n\n记住：eat（吃）'
+                story: '太阳（e）照耀着餐桌，一滴雨（a）落在盘子里，一棵树干（t）立在餐桌旁。\n\n记住：eat（吃）'
             },
             { 
                 word: 'drink', 
                 chinese: '喝',
-                story: '喝水（drink）时，我们感到清凉解渴。\n\n字母故事：\n你拿起杯子（d），插入吸管（r）。一个人（i）正在喝水，水龙头（n）流出清凉的水，水壶（k）里还装着满满的水。\n\n记住：drink（喝）'
+                story: '一个贝壳（d）装着水，树枝（r）像吸管。一根小草（i）在水中摇摆，远处的小山（n）倒映在水中，一把钥匙（k）挂在杯子上。\n\n记住：drink（喝）'
             },
             { 
                 word: 'clean', 
                 chinese: '打扫',
-                story: '打扫（clean）房间时，我们让环境变得整洁明亮。\n\n字母故事：\n你拿起扫把（c）开始打扫，用拖把（l）擦地。垃圾桶（e）里装满了垃圾，窗户（a）被擦得明亮，吸尘器（n）吸走了所有灰尘。\n\n记住：clean（打扫）'
+                story: '一朵云（c）飘在窗外，花茎（l）像扫把。太阳（e）照耀着房间，一滴雨（a）落在窗台上，远处的小山（n）清晰可见。\n\n记住：clean（打扫）'
             },
             { 
                 word: 'sleep', 
                 chinese: '睡觉',
-                story: '睡觉（sleep）时，我们闭上眼睛，进入甜美的梦乡。\n\n字母故事：\n弯弯的月亮（s）挂在夜空，你躺在枕头（l）上。两只眼睛（e,e）慢慢闭上，嘴巴（p）发出轻轻的呼噜声，进入了梦乡。\n\n记住：sleep（睡觉）'
+                story: '一条小蛇（s）盘在枕头上，花茎（l）轻轻摇晃。太阳（e）慢慢落下，另一轮太阳（e）也躲起来了，一个枕头（p）让你安睡。\n\n记住：sleep（睡觉）'
             }
         ];
 
